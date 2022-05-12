@@ -36,3 +36,52 @@ the max area of the container is 49.
 * Python 3.8+
 * Flask 2.1.2
 * Pytest 7.1.2
+
+## Usage
+
+Once python 3.8 environemnt is ready to be used, install requirements:
+
+```bash
+$ pip install -r requirements.txt
+```
+
+Set environment variables properly, you can use *.env.sample* as reference
+
+Run Flask application:
+```bash
+$ flask run
+```
+
+Run tests (simple execution):
+```bash
+$ python -m pytest
+```
+Run tests with test coverage:
+```bash
+$ python -m pytest --cov=my_app
+```
+
+Expected result:
+```
+plugins: cov-3.0.0
+collected 6 items
+
+my_app/tests/functional/test_calculate_api.py ....                        [ 66%]
+my_app/tests/unit/test_calculate.py ..                                    [100%]
+
+---------- coverage: platform darwin, python 3.10.4-final-0 ----------
+Name                                            Stmts   Miss  Cover
+-------------------------------------------------------------------
+my_app/__init__.py                                  7      0   100%
+my_app/calculate.py                                14      0   100%
+my_app/settings.py                                  3      0   100%
+my_app/tests/__init__.py                            0      0   100%
+my_app/tests/conftest.py                            8      0   100%
+my_app/tests/functional/__init__.py                 0      0   100%
+my_app/tests/functional/test_calculate_api.py      15      0   100%
+my_app/tests/unit/__init__.py                       0      0   100%
+my_app/tests/unit/test_calculate.py                15      0   100%
+my_app/views.py                                    15      0   100%
+-------------------------------------------------------------------
+TOTAL                                              77      0   100%
+```
