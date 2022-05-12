@@ -1,4 +1,4 @@
-from calculate import calculate_max_area
+from my_app.calculate import calculate_max_area
 
 
 def test_calculate_max_area():
