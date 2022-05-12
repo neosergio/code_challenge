@@ -51,6 +51,15 @@ Run Flask application:
 ```bash
 $ flask run
 ```
+Use the endpoint /calculate with numbers GET parameter: 
+- [http://127.0.0.1:5000/calculate?numbers=1,8,6,2,5,4,8,3,7](http://127.0.0.1:5000/calculate?numbers=1,8,6,2,5,4,8,3,7)
+
+Expected result:
+```json
+{
+  "max_area": 49
+}
+```
 
 Run tests (simple execution):
 ```bash
